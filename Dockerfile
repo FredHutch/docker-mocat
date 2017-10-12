@@ -20,7 +20,8 @@ RUN cd /usr/ && \
 	rm MOCAT2-lite.zip && \
 	cd /usr/MOCAT && \
 	echo yes | perl setup.MOCAT.pl && \
-	rm -r dat/* && \
+	rm -r /usr/MOCAT/data && \
+	mkdir /usr/MOCAT/data && \
 	sed -i "s/EMAIL=''/EMAIL='\$EMAIL'/" /usr/MOCAT/src/runMOCAT.sh
 # The last line parameterizes the EMAIL variable in the run script
 # That means you must set the env variable EMAIL prior to running runMOCAT.sh
