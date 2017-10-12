@@ -17,7 +17,7 @@ WORKDIR /share
 RUN cd /usr/ && \
 	wget http://vm-lux.embl.de/~kultima/share/MOCAT/v2.0/MOCAT2-lite.zip && \
 	unzip MOCAT2-lite.zip && \
-	rm MOCAT2.zip && \
+	rm MOCAT2-lite.zip && \
 	cd /usr/MOCAT && \
 	echo yes | perl setup.MOCAT.pl && \
 	rm -r dat/* && \
